@@ -13,7 +13,8 @@ export class PersonComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  delete(id: number){
+  deleteMe(id: number){
     this.handleDelete.emit(id);
+    console.log(id);
   }
 }

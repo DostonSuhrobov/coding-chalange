@@ -17,7 +17,12 @@ export class AppComponent {
     this.http.get('./assets/people.json').subscribe((response : any) => { this.people = response });
   }
 
-  
+  deletePerson(id: number){
+    const changedTeamMember = [...this.people].filter((person) => { person.id !== id});
+    this.people = changedTeamMember;
+    console.log(this.people);
+  }
+
 }
 
 export class Person {
