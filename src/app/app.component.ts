@@ -18,9 +18,8 @@ export class AppComponent {
   }
 
   deletePerson(id: number){
-    const changedTeamMember = [...this.people].filter((person) => { person.id !== id});
-    this.people = changedTeamMember;
-    console.log(this.people);
+    let changedTeamMember = [...this.people]    
+    this.people = changedTeamMember.filter(personId => personId.id !== id);
   }
 
 }
